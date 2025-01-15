@@ -62,7 +62,7 @@ const Home = () => {
             const response=await axios.post("http://localhost:8005/api/v1/user/user",{
                 email:email
             })
-            setUsers(response.data)
+            setUser(response.data)
             console.log(response.data)
         } catch (error) {
             console.log(error)
@@ -100,7 +100,7 @@ const Home = () => {
             </div>
         ))}
 
-        {curr=="user" && users.map(user=>(
+        {curr=="user" &&
             <div className='user'>
                 <p>userId: {user._id}</p>
                 <p>username: {user.username}</p>
@@ -111,7 +111,7 @@ const Home = () => {
                 <button>update</button>
                 <button>delete</button>
             </div>
-        ))}
+        }
     </div>
   )
 }
