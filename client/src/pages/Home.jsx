@@ -99,6 +99,19 @@ const Home = () => {
                 <button>delete</button>
             </div>
         ))}
+
+        {curr=="user" && users.map(user=>(
+            <div className='user'>
+                <p>userId: {user._id}</p>
+                <p>username: {user.username}</p>
+                {user.isActive==true?<p>Active</p>:<p>Not Active</p>}
+                <p>joining date: {user.joinedDate}</p>
+                <p>last date: {user.lastDate}</p>
+                <p>email: {user.email}</p>
+                <button>update</button>
+                <button>delete</button>
+            </div>
+        ))}
     </div>
   )
 }
