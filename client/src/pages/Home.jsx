@@ -102,6 +102,7 @@ const Home = () => {
 
         {curr=="user" &&
             <div className='user'>
+                <h1>profile</h1>
                 <p>userId: {user._id}</p>
                 <p>username: {user.username}</p>
                 {user.isActive==true?<p>Active</p>:<p>Not Active</p>}
