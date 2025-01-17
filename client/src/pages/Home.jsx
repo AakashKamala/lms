@@ -87,6 +87,7 @@ const Home = () => {
             </div>
         ))}
         {/* {curr=="books"?<Books />:<></>} */}
+        {curr=="users" && <div>Users</div>}
         {curr=="users" && users.map(user=>(
             <div className='users' key={user._id}>
                 <p>userId: {user._id}</p>
