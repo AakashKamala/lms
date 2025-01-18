@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <div>
         {authToken?<Logout />:<div></div>}
-        <h1>Home</h1>
+        {/* <h1>Home</h1> */}
         <button onClick={getBooks}>Books</button>
         {type=="admin"?<button onClick={getUsers}>Users</button>:<button onClick={profile}>Profile</button>}
         {type=="admin"?<div><button>Add Book</button><button>Add user</button></div>:<></>}
